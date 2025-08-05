@@ -1,0 +1,10 @@
+numpy
+pyttsx3
+pyaudio
+speechrecognition
+insightface
+opencv-python
+opencv-contrib-python
+onnxruntime
+faiss-cpu
+python-dotenv
