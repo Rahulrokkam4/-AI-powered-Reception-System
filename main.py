@@ -31,7 +31,7 @@ try:
     
             # Search in FAISS
             D, I = index.search(emb, k=1)  # Get nearest neighbor
-            if D[0][0] < 0.9:  # Lower = better match (Euclidean L2)
+            if D[0][0] < 0.6:  # Lower = better match (Euclidean L2)
                 name = labels[I[0][0]]
                 if name not in greeted:
                     greeted.add(name)
@@ -73,4 +73,5 @@ except Exception as e:
     print("[! ERROR :]",e)
 finally:
     cap.release()
+
     cv2.destroyAllWindows()
