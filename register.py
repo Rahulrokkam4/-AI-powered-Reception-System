@@ -90,8 +90,5 @@ class FaceRecognition:
         else:
             print("No faces loaded into memory.")
   
-if __name__ == "__main__":
-    path = "C:\\Users\\rahul\\OneDrive\\Desktop\\Faces\\known_faces"
-    k = FaceRecognition()
-    k.load_face(path)
+
     
