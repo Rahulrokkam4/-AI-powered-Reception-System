@@ -9,8 +9,8 @@ load_dotenv()
 
 # employee details
 employee_detail = {
-    "raghu":"rahulrokkam1234@gmail.com",
-    "kumar":"ravikumar3@gmail.com"
+    # Employee mails
+    "name" : "mail id"
 }
 
 class Emailsender:
@@ -19,7 +19,7 @@ class Emailsender:
         self.EMAIL_PASS = os.getenv("EMAIL_PASS")
         self.EMAIL_HOST = os.getenv("EMAIL_HOST")
         self.EMAIL_PORT = os.getenv("EMAIL_PORT")
-        self.unknown_face_dir = "C:\\Users\\rahul\\OneDrive\\Desktop\\Faces\\unknown_faces"
+        self.unknown_face_dir = "dir for saving unknown faces"
         
         
     def send_email_to_employee(self, visitor_name, employee_name, to_email):
@@ -41,7 +41,7 @@ class Emailsender:
         msg = EmailMessage()
         msg["Subject"] = "Unknown Visitor Alert"
         msg["From"] = self.EMAIL_USER
-        msg["To"] = "rahulrokkam1234@gmail.com"
+        msg["To"] = "mail to" # replace with receiver mail
         msg.set_content("An unknown person visited. Photo is attached.")
 
         with open(image_path, "rb") as img:
@@ -78,4 +78,5 @@ class Emailsender:
 if __name__ == "__main__":
     e = Emailsender()
     e.send_email_to_employee("rahul","kumar","ravirokkam3@gmail.com")
+
     
